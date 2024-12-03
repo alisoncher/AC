@@ -6,19 +6,19 @@
 /* Body styling */
 body {
     display: flex;
-    margin: 0;
-    padding-top: 50px;
+    flex-direction: column; /* Stacks content vertically */
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
     font-family: 'Poppins', sans-serif;
-    height: 100vh; /* Ensures full viewport height */
-    background-color: #f4f4f4; /* Light background for contrast */
+    background-color: #f4f4f4;
 }
 
 /* Card styling */
 .card {
-    width: 200px;
-    height: 300px;
+    width: 300px; /* Adjust size of card */
+    height: 450px;
     position: relative;
     border: 1px solid black;
     transition: transform 1s;
@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     padding: 20px;
     width: 100%;
     z-index: 1;
@@ -45,7 +45,11 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Front of the card (image container) */
+.card .back p {
+    font-size: 14px; /* Smaller font size */
+}
+
+/* Front of the card */
 .card .front {
     width: 100%;
     height: 100%;
@@ -63,23 +67,14 @@ body {
     object-fit: cover;
 }
 
-/* Optional: overlay styling for the front */
-.card .front p {
-    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
-    backdrop-filter: blur(3px);
-    padding: 20px;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /* Active state for flipping */
 .card.active {
     transform: perspective(1000px) rotateY(180deg);
 }
+
+/* Back to Home Button Styling */
+.back-btn {
+    margin-top: 30px; /* Adds space between card and button */
+}
+
+
