@@ -1,24 +1,28 @@
-<link rel=""stylesheet" href=""./style.css"/>
-<div id=""card" class=""card>
-    <div class="front">
-        <img    
-        src = "AC.png"
-        />
-    </div>
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipping Card</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="card" class="card">
+        <div class="front">
+            <img src="AC.png" alt="Front Image">
+        </div>
+        <div class="back">
+            <p><b>Happy Holidays!</b></p>
 
-    <div class="back">
-        <p>
-            <b> Happy Holidays</b>
-        </p>
-        <span> Click</span>
         </div>
     </div>
 
-<script>
-    const card= document.getElementById("card")
+    <script>
+        const card = document.getElementById("card");
 
-    card.addEventListener("click", () => {
-        card.ClassList.toggle("active")
-    })
-</script>
+        card.addEventListener("click", () => {
+            card.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
