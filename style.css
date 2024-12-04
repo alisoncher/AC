@@ -26,12 +26,19 @@ body {
     transform-style: preserve-3d;
 }
 
+.card p {
+    font-family: 'Architects Daughter';
+    font-size: 1.5em; 
+    color: #333;
+    text-align: center;
+}
+
 /* Back of the card */
 .card .back {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: white;
+    background-color: #fffbe13a;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -72,9 +79,68 @@ body {
     transform: perspective(1000px) rotateY(180deg);
 }
 
+
+
 /* Back to Home Button Styling */
 .back-btn {
     margin-top: 30px; /* Adds space between card and button */
 }
+
+/* Style the button container */
+.button-container {
+    display: flex; /* Enables Flexbox layout */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px; /* Space above the button group */
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #333;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Sticker styling */
+.floating-sticker {
+    position: absolute;
+    width: 100px;
+    height: auto; /* Maintain aspect ratio */
+    top: 50%; /* Initial position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Prevent interaction */
+    z-index: -1; /* Keep it in the background */
+    animation: moveAround 10s infinite ease-in-out alternate; /* Apply animation */
+    transition: all 4s ease-in-out;
+}
+
+/* Random movement animation */
+@keyframes moveAround {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-50px, -100px);
+    }
+    50% {
+        transform: translate(100px, 50px);
+    }
+    75% {
+        transform: translate(-100px, 150px);
+    }
+    100% {
+        transform: translate(50px, -50px);
+    }
+}
+
 
 
