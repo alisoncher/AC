@@ -131,5 +131,18 @@ button:hover {
     }
 }
 
+.holiday-message {
+    font-family: 'Shadows Into Light', cursive; /* Handwriting-like font */
+    font-size: 1.5rem; /* Adjust size to preference */
+    color: #2C3E50; /* Elegant dark blue */
+    text-align: center; /* Center align text */
+    margin: 20px auto; /* Add spacing */
+    line-height: 1.8; /* Improve readability */
+}
+
+.holiday-message strong {
+    color: #E74C3C; /* Highlighted red for emphasis */
+    font-size: 1.8rem; /* Slightly larger for importance */
+}
 
 
