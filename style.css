@@ -133,8 +133,8 @@ button:hover {
 
 
 .scroll-wrapper {
-    position: absolute;      /* or fixed if you want it always visible */
-    top: 80px;               /* 👈 controls distance from top */
+    position: fixed;      /* or fixed if you want it always visible */
+    top: 20px;               /* 👈 controls distance from top */
     left: 0;
     width: 100%;
     overflow: hidden;
