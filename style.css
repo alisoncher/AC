@@ -132,5 +132,30 @@ button:hover {
 }
 
 
+.floating-row {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    gap: 40px;
+    animation: scroll 30s linear infinite;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.floating-row img {
+    width: 100px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
 
 
