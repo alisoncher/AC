@@ -133,23 +133,24 @@ button:hover {
 
 
 .scroll-wrapper {
-    position: fixed;      /* or fixed if you want it always visible */
-    top: 20px;               /* 👈 controls distance from top */
+    position: fixed;                    /* stays consistent */
+    top: clamp(40px, 8vh, 100px);        /* responsive top offset */
     left: 0;
     width: 100%;
     overflow: hidden;
     pointer-events: none;
-    z-index: -1;             /* optional */
+    z-index: -1;
 }
 
 .floating-row {
     display: flex;
-    gap: 40px;
-    animation: scroll 40s linear infinite;
+    gap: clamp(16px, 4vw, 40px);
+    animation: scroll 45s linear infinite;
+    width: max-content;                 /* 🔑 */
 }
 
 .floating-row img {
-    width: 100px;
+    width: clamp(48px, 8vw, 100px);     /* responsive image size */
     height: auto;
     flex-shrink: 0;
 }
@@ -159,9 +160,10 @@ button:hover {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
+
 
 
 
