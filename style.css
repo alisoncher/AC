@@ -142,20 +142,7 @@ button:hover {
     z-index: -1;
 }
 
-.floating-row {
-    display: flex;
-    gap: clamp(16px, 4vw, 40px);
-    animation: scroll 45s linear infinite;
-    width: max-content;                 /* 🔑 */
-}
 
-.floating-row img {
-    width: clamp(48px, 8vw, 100px); /* choose ONE dimension */
-    height: auto;                   /* 🔑 keeps original shape */
-    flex-shrink: 0;
-    display: block;
-    object-fit: contain;            /* extra safety */
-}
 
 @keyframes scroll {
     from {
