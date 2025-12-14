@@ -132,15 +132,20 @@ button:hover {
 }
 
 
-.floating-row {
-    position: absolute;
-    top: 50%;
+.scroll-wrapper {
+    position: absolute;      /* or fixed if you want it always visible */
+    top: 80px;               /* 👈 controls distance from top */
     left: 0;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;             /* optional */
+}
+
+.floating-row {
     display: flex;
     gap: 40px;
-    animation: scroll 30s linear infinite;
-    pointer-events: none;
-    white-space: nowrap;
+    animation: scroll 40s linear infinite;
 }
 
 .floating-row img {
@@ -151,11 +156,13 @@ button:hover {
 
 @keyframes scroll {
     from {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     to {
         transform: translateX(-100%);
     }
 }
+
+
 
 
