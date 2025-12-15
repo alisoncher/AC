@@ -81,7 +81,7 @@ body {
     display: flex; 
     justify-content: center; 
     gap: 10px; 
-    margin-top: 20px; }
+    margin-top: 5px; }
 
 
 button {
@@ -161,7 +161,7 @@ html, body {
     align-items: center;
     gap: clamp(16px, 4vw, 40px);
     width: max-content;                 /* 🔑 critical */
-    animation: scroll 40s linear infinite;
+    animation: scroll 50s linear infinite;
 }
 
 .floating-row.reverse {
