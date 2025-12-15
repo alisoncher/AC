@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -132,46 +131,49 @@ button:hover {
 }
 
 
-.scroll-wrapper {
+.scroll-wrapper.top {
     position: fixed;
+    top: clamp(40px, 8vh, 100px);
+    left: 0;
     width: 100%;
     overflow: hidden;
     pointer-events: none;
     z-index: -1;
 }
 
-/* positioning */
-.scroll-wrapper.top {
-    top: clamp(10px, 3vh, 40px);
-}
-
 .scroll-wrapper.bottom {
-    bottom: clamp(10px, 3vh, 40px);
+    position: fixed;
+    bottom: clamp(40px, 8vh, 100px);
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
 }
 
-/* rows */
+/* scrolling row */
 .floating-row {
     display: flex;
     align-items: center;
     gap: clamp(16px, 4vw, 40px);
-    width: max-content;
-    animation: scroll 40s linear infinite;
+    width: max-content;                 /* 🔑 critical */
+    animation: scroll 30s linear infinite;
 }
 
-/* reverse direction */
 .floating-row.reverse {
     animation-direction: reverse;
 }
 
-/* images */
+/* images – SAFE sizing */
 .floating-row img {
-    height: clamp(120px, 14vw, 220px);
-    width: auto;
+    height: clamp(120px, 14vw, 220px); /* ⬆ bigger */
+    width: auto;                      /* 🔑 keeps shape */
     flex-shrink: 0;
     display: block;
 }
 
-/* animation */
+
+/* seamless loop */
 @keyframes scroll {
     from {
         transform: translateX(0);
