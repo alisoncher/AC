@@ -130,6 +130,10 @@ button:hover {
     }
 }
 
+html, body {
+    overflow: hidden; /* disables page scrolling */
+    height: 100%;     /* ensures body fills viewport */
+}
 
 .scroll-wrapper.top {
     position: fixed;
@@ -157,7 +161,7 @@ button:hover {
     align-items: center;
     gap: clamp(16px, 4vw, 40px);
     width: max-content;                 /* 🔑 critical */
-    animation: scroll 30s linear infinite;
+    animation: scroll 35s linear infinite;
 }
 
 .floating-row.reverse {
@@ -166,7 +170,7 @@ button:hover {
 
 /* images – SAFE sizing */
 .floating-row img {
-    height: clamp(120px, 14vw, 220px); /* ⬆ bigger */
+    height: clamp(200px, 30vw, 300px); /* ⬆ bigger */
     width: auto;                      /* 🔑 keeps shape */
     flex-shrink: 0;
     display: block;
@@ -179,11 +183,8 @@ button:hover {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(-50%); /* scroll full duplicated width */
     }
 }
 
-html, body {
-    overflow: hidden; /* disables page scrolling */
-    height: 100%;     /* ensures body fills viewport */
-}
+
