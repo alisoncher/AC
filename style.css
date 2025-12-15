@@ -182,3 +182,8 @@ button:hover {
         transform: translateX(-50%);
     }
 }
+
+html, body {
+    overflow: hidden; /* disables page scrolling */
+    height: 100%;     /* ensures body fills viewport */
+}
