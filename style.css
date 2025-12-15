@@ -142,11 +142,11 @@ button:hover {
 
 /* positioning */
 .scroll-wrapper.top {
-    top: clamp(40px, 8vh, 100px);
+    top: clamp(10px, 3vh, 40px);
 }
 
 .scroll-wrapper.bottom {
-    bottom: clamp(40px, 8vh, 100px);
+    bottom: clamp(10px, 3vh, 40px);
 }
 
 /* rows */
