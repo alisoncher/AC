@@ -78,10 +78,12 @@ body {
 }
 
 .button-container {
-    display: flex; 
-    justify-content: center; 
-    gap: 10px; 
-    margin-top: 5px; }
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    top: -20px; /* moves it up 20px from its normal position */
+}
 
 
 button {
@@ -99,18 +101,6 @@ button:hover {
 }
 
 
-.floating-sticker {
-    position: absolute;
-    width: 100px;
-    height: auto; 
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none; 
-    z-index: -1; 
-    animation: moveAround 10s infinite ease-in-out alternate;
-    transition: all 4s ease-in-out;
-}
 
 @keyframes moveAround {
     0% {
