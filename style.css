@@ -125,6 +125,16 @@ html, body {
     height: 100%;     /* ensures body fills viewport */
 }
 
+.scroll-wrapper {
+    pointer-events: auto;
+}
+
+.scroll-wrapper:hover .floating-row,
+.scroll-wrapper:active .floating-row {
+    animation-play-state: paused;
+}
+
+
 .scroll-wrapper.top {
     position: fixed;
     top: clamp(40px, 8vh, 100px);
